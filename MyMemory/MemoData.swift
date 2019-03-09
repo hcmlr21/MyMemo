@@ -5,5 +5,5 @@ class MemoData {
     var title: String?
     var contents: String?
     var image: UIImage?
-    var regdata: Data?
+    var regdata: Date?
 }

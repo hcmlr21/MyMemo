@@ -15,6 +15,22 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet var preview: UIImageView!
     
     @IBAction func save(_ sender: Any) {
+        guard self.contents.text?.isEmpty == false else {
+            let alert = UIAlertController(title: nil, message: "내용을 입력해 주세요!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        let data = MemoData()
+        
+        data.title = self.subject
+        data.contents = self.contents.text
+        data.image = self.preview.image
+        data.regdata = Date()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memolist.append(data)
     }
     @IBAction func pick(_ sender: Any) {
         let picker = UIImagePickerController()
