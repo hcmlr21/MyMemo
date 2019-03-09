@@ -31,6 +31,8 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memolist.append(data)
+        
+        _ = self.navigationController?.popViewController(animated: true)
     }
     @IBAction func pick(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -46,7 +48,6 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         picker.dismiss(animated: false)
     }
-    
     func textViewDidChange(_ textView: UITextView) {
         let contents = textView.text as NSString
         let length = ((contents.length > 15) ? 15 : contents.length)
