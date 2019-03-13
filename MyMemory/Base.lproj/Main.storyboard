@@ -13,8 +13,8 @@
         <!--목록-->
         <scene sceneID="IRG-DF-A2I">
             <objects>
-                <tableViewController title="목록" id="roK-Rb-EWx" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MC6-9m-ni8">
+                <tableViewController title="목록" id="roK-Rb-EWx" customClass="MemoListVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MC6-9m-ni8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,6 +71,11 @@
                                         <constraint firstAttribute="trailing" secondItem="pqY-Eg-tw6" secondAttribute="trailing" id="wO6-Ku-e8K"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="4dv-UH-rf4" id="v0z-3W-NR5"/>
+                                    <outlet property="regdate" destination="pqY-Eg-tw6" id="RLK-QL-gvF"/>
+                                    <outlet property="subject" destination="Knd-fj-ZZj" id="qwR-s9-zIi"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="2hU-bR-OnC" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -128,6 +133,12 @@
                                         <constraint firstItem="e4q-Dq-Xef" firstAttribute="top" secondItem="v77-6m-EyV" secondAttribute="bottom" constant="10" id="z9O-JY-4dV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="e4q-Dq-Xef" id="Q5K-Tt-mGb"/>
+                                    <outlet property="img" destination="lid-mO-u6P" id="0ya-De-VKT"/>
+                                    <outlet property="regdate" destination="v77-6m-EyV" id="Aub-kP-xzP"/>
+                                    <outlet property="subject" destination="DKg-sj-6NP" id="hI5-Ir-fYd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
