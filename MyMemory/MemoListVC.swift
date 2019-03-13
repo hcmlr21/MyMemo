@@ -36,7 +36,13 @@ class MemoListVC: UITableViewController {
         
         return cell
     }
-
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = self.appdelegate.memolist[indexPath.row]
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as? MemoReadVC else {
+            return
+        }
+        vc.param = row
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
