@@ -24,7 +24,9 @@ class MemoListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.appdelegate.memolist[indexPath.row]
         let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MemoCell else {
+            return UITableViewCell()
+        }
         
         cell.subject?.text = row.title
         cell.contents?.text = row.contents

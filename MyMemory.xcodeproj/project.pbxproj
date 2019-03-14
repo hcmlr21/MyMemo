@@ -58,7 +58,6 @@
 		483B1419222EC06400F9219D = {
 			isa = PBXGroup;
 			children = (
-				482E7CF32238D6C2009593EF /* Resource */,
 				483B1424222EC06400F9219D /* MyMemory */,
 				483B1423222EC06400F9219D /* Products */,
 			);
@@ -75,6 +74,7 @@
 		483B1424222EC06400F9219D /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
+				482E7CF32238D6C2009593EF /* Resource */,
 				48EE3B252233A0BF009623B0 /* MemoData.swift */,
 				483B1425222EC06400F9219D /* AppDelegate.swift */,
 				48EE3B1B22325045009623B0 /* MemoListVC.swift */,
